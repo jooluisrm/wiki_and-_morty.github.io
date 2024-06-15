@@ -5,3 +5,103 @@
     font-size: 14px;
     font-family: Arial, Helvetica, sans-serif;
 }
+.bd {
+    background-image: url(../img/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    
+}
+.bd .filtro {
+    background-color: rgba(0, 0, 0, 0.432);
+    
+}
+header {
+    background-color: rgba(0, 0, 0, 0.527);
+    color: white;
+    font-weight: bold;
+    height: 90px;
+}
+
+.container {
+    margin: 0 100px;
+    padding-top: 10px;
+}
+
+.top-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.top-header .logo-header a img{
+    width: 200px;
+}
+
+.top-header .menu-center ul, .menu-center ul a {
+    color: white;
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.top-header .name-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+main {
+    color: white;
+    height: calc(100vh - 90px);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.main-center .bemvindo {
+    text-shadow: 2px 2px 1px black;
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: center;
+    padding-bottom: 70px;
+    color: rgb(255, 255, 255);
+}
+.container-buscador .pergunta {
+    padding-bottom: 10px;
+    font-weight: bolder;
+    font-size: 15px;
+    text-shadow: 2px 2px 1px black;
+}
+.container-buscador .buscador {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.buscador img {
+    width: 20px;
+    margin-right: -40px;
+    z-index: 1;
+}
+.container-buscador .buscador input[type='search']{
+    width: 400px;
+    height: 40px;
+    border-radius: 20px;
+    border: 0;
+    padding: 10px 40px;
+}
+.buscador input[type='submit'] {
+    color: white;
+    background-color: blueviolet;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 0;
+}
+
