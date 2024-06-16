@@ -27,6 +27,15 @@
             </div>
         </header>
 
+        <aside>
+            <div class="personagem">
+                <h1>Lista de Id</h1>
+                <ul class="conteiner-ids">
+
+                </ul>
+            </div>
+        </aside>
+
         <main>
             <div class="main-center">
                 <div class="bemvindo">
@@ -34,12 +43,13 @@
                 </div>
                 <div class="container-buscador">
                     <div class="pergunta">
-                        Oque você deseja pesquisar?
+                        Qual ID você deseja buscar?
                     </div>
                     <div class="buscador">
                         <img src="assets/img/lupa.png" alt="">
-                        <input type="search" placeholder="Buscar">
-                        <input type="submit" name="" value="Procurar">
+                        
+                        <input type="number" placeholder="Digite o ID do seu personagem" min="1" required autofocus>
+                        <input type="submit" name="" value="Buscar ID" id="buscar">
                     </div>
 
                 </div>
