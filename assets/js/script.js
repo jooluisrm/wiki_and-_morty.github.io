@@ -3,7 +3,7 @@ let buscar = document.querySelector('input[type=submit]');
 let section = document.querySelector('section');
 let containerGeral = document.querySelector('.container-geral');
 let fundo = document.querySelector('.fundo-preto');
-
+let buttonClose = document.querySelector('.painel-personagem button');
 
 buscar.addEventListener('click', async () => {
     if (barraPesquisa.value.length > 0 && barraPesquisa.value != '0') {
@@ -22,8 +22,16 @@ buscar.addEventListener('click', async () => {
     } else {
         alert('Informe um ID para continuar!');
     }
+    barraPesquisa.value = '';
     
 
+});
+
+buttonClose.addEventListener('click', () => {
+    section.style.display = 'flex';
+    fundo.style.display = 'none';
+    containerGeral.style.display = 'block';
+    barraLateral.style.display = 'flex';
 });
 
 function mostrarPersonagem(json) {
@@ -35,14 +43,24 @@ function mostrarPersonagem(json) {
     let genero = painelPersonagem.querySelector('.genero-person');
     let origen = painelPersonagem.querySelector('.origen-person');
     let local = painelPersonagem.querySelector('.local-name');
+    let img = document.querySelector('.img-person img');
 
-    nome.innerHTML = `Nome: ${json.name}`
+    img.src = json.image;
+    nome.innerHTML = `<span>Nome: </span> ${json.name}`;
+
+    if(json.status === 'Alive') {
+        status.style.color = 'darkGreen';
+    } else {
+        status.style.color = 'darkRed'
+    }
+    status.innerHTML = `<span>Status: </span> ${json.status}`;
+    specie.innerHTML = `<span>Especie: </span> ${json.species}`;
+    genero.innerHTML = `<span>Genêro: </span> ${json.gender}`;
+    origen.innerHTML = `<span>Planeta: </span> ${json.origin.name}`;
+    local.innerHTML = `<span>Local: </span> ${json.location.name}`;
+
 
 }
-
-
-
-
 
 
 
@@ -69,5 +87,7 @@ function criarAside(json) {
         console.log(json[i]);
     };
 };
+
+carregarId();
 
 
